@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | Executive Overview</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Smooth hover card subtle elevations */
+        .card-shadow {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-lg text-navy-900 tracking-tight flex items-center gap-2">
+                <span class="bg-navy-900 text-white rounded p-1.5 text-xs font-mono">JS</span>
+                <span>Meghna Parija</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-brand-600 transition-colors">About</a>
+                <a href="#skills" class="hover:text-brand-600 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-brand-600 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+            </nav>
+
+            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-navy-900 rounded-md hover:bg-navy-800 transition-colors shadow-sm">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero / About Section -->
+        <section id="about" class="py-16 md:py-24 bg-white border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
+                    
+                    <!-- Headshot Container -->
+                    <div class="relative shrink-0">
+                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-slate-100 shadow-xl bg-slate-100">
+                            <!-- 
+                                ====================================================================
+                                INSERT YOUR HEADSHOT FILE NAME BELOW IN THE 'src' ATTRIBUTE
+                                E.g., src="headshot.jpg" or src="assets/profile.png"
+                                ====================================================================
+                            -->
+                            <img 
+                                id="headshot-img"
+                                src="Parija_Meghna_Headshot.jpg" 
+                                alt="Meghna Parija Headshot" 
+                                class="w-full h-full object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400/0f172a/ffffff?text=Your+Photo';"
+                            />
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-emerald-500 border-2 border-white w-5 h-5 rounded-full" title="Available for opportunities"></div>
+                    </div>
+
+                    <!-- Personal Statement & Intro -->
+                    <div class="text-center md:text-left space-y-4 max-w-2xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-100">
+                            <i class="fa-solid me-1 fa-briefcase text-xs"></i> Executive Professional Portfolio
+                        </div>
+                        
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-tight">
+                            Meghna Parija
+                        </h1>
+
+                        <!-- Personal Statement -->
+                        <p class="text-lg sm:text-xl font-medium text-slate-700 leading-relaxed">
+                            Results-driven Technology & Operations Strategist leveraging data analysis, cloud engineering, and operational excellence to build scalable solutions that drive measurable business growth.
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-4 text-sm font-medium">
+                            <a href="#projects" class="px-5 py-2.5 bg-navy-900 text-white rounded-md hover:bg-navy-800 transition-colors shadow-sm inline-flex items-center gap-2">
+                                View Projects <i class="fa-solid fa-arrow-down text-xs"></i>
+                            </a>
+                            <a href="#contact" class="px-5 py-2.5 bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors rounded-md inline-flex items-center gap-2">
+                                Contact Me
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center md:text-left mb-10">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">Core Capabilities & Skills</h2>
+                    <p class="text-slate-600 text-sm mt-1">Highlighted technical and professional proficiencies curated for enterprise impact.</p>
+                </div>
+
+                <!-- Skills Categories (Populated dynamically via JS below) -->
+                <div id="skills-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Dynamic skills injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 bg-white border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">Featured Projects</h2>
+                        <p class="text-slate-600 text-sm mt-1">A showcase of strategic initiatives and technical deployments.</p>
+                    </div>
+
+                    <!-- Instant Search/Filter Bar -->
+                    <div class="relative min-w-[260px]">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                        <input 
+                            type="text" 
+                            id="project-search" 
+                            placeholder="Filter by keyword or tag..." 
+                            class="w-full pl-9 pr-4 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600 focus:bg-white transition-all"
+                        >
+                    </div>
+                </div>
+
+                <!-- Projects Grid Container -->
+                <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Dynamic project cards injected here -->
+                </div>
+
+                <!-- Empty Search Fallback -->
+                <div id="no-projects" class="hidden text-center py-12 text-slate-500">
+                    <i class="fa-regular fa-folder-open text-4xl mb-3 text-slate-300"></i>
+                    <p class="text-base font-medium">No matching projects found.</p>
+                    <p class="text-xs text-slate-400 mt-1">Try searching for alternative keywords like "Data", "Cloud", or "Strategy".</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-navy-950 text-slate-300 py-12 border-t border-navy-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8 border-b border-slate-800">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Connect & Collaborate</h3>
+                    <p class="text-sm text-slate-400 max-w-md">Open to executive roles, strategic advisory, and high-impact engineering projects. Reach out via email or professional networks.</p>
+                </div>
+                
+                <div class="flex flex-wrap items-center gap-4 md:justify-end">
+                    <a href="mailto:email@example.com" class="p-3 bg-slate-800/80 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm flex items-center gap-2 border border-slate-700">
+                        <i class="fa-regular fa-envelope text-brand-600"></i> Email
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="p-3 bg-slate-800/80 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm flex items-center gap-2 border border-slate-700">
+                        <i class="fa-brands fa-linkedin text-sky-400"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="p-3 bg-slate-800/80 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm flex items-center gap-2 border border-slate-700">
+                        <i class="fa-brands fa-github text-white"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Meghna Parija. All rights reserved.</p>
+                <div class="flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+                    <span>Repository active &bull; Updated <span id="last-updated">Recently</span></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Continuously Updatable Data Script -->
+    <script>
+        /*
+         ====================================================================
+         EDITABLE PORTFOLIO DATA (UPDATE PROJECTS & SKILLS BELOW EASY TO ADD)
+         ====================================================================
+        */
+
+        // 1. SKILLS DATA STRUCTURE
+        const skillsData = [
+            {
+                category: "Technical & Development",
+                icon: "fa-code",
+                skills: ["Python", "SQL", "JavaScript", "HTML5/CSS3", "Git & GitHub", "REST APIs"]
+            },
+            {
+                category: "Data & Strategy",
+                icon: "fa-chart-pie",
+                skills: ["Data Analytics", "Financial Modeling", "Business Intelligence", "Tableau", "Process Optimization"]
+            },
+            {
+                category: "Leadership & Ops",
+                icon: "fa-sitemap",
+                skills: ["Agile Management", "Cross-Functional Leadership", "Quality Assurance", "Strategic Planning"]
+            }
+        ];
+
+        // 2. PROJECTS DATA STRUCTURE (Add new projects to this array easily)
+        const projectsData = [
+            {
+                title: "Enterprise Revenue Analytics Pipeline",
+                description: "Architected an automated data processing pipeline aggregating transactional data across enterprise silos to deliver real-time revenue intelligence.",
+                tags: ["Data Analytics", "Python", "SQL", "Tableau"],
+                codeLink: "https://github.com",
+                demoLink: "https://example.com"
+            },
+            {
+                title: "Cloud Operations Dashboard",
+                description: "Designed a centralized cloud management platform enabling infrastructure teams to monitor uptime metrics and optimize monthly operational cost allocation.",
+                tags: ["Cloud Ops", "JavaScript", "REST APIs", "AWS"],
+                codeLink: "https://github.com",
+                demoLink: "https://example.com"
+            },
+            {
+                title: "Supply Chain Risk Assessment Framework",
+                description: "Engineered a predictive risk modeling framework reducing vendor disruption times by 24% across multi-region logistics operations.",
+                tags: ["Financial Modeling", "Strategy", "Process Optimization"],
+                codeLink: "https://github.com",
+                demoLink: "https://example.com"
+            }
+        ];
+
+        /*
+         ====================================================================
+         DYNAMIC RENDERERS & LOGIC
+         ====================================================================
+        */
+
+        // Render Skills
+        function renderSkills() {
+            const container = document.getElementById('skills-container');
+            container.innerHTML = skillsData.map(group => `
+                <div class="bg-white p-6 rounded-xl border border-slate-200 card-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2.5 bg-brand-50 text-brand-600 rounded-lg">
+                            <i class="fa-solid ${group.icon}"></i>
+                        </div>
+                        <h3 class="font-bold text-navy-900 text-base">${group.category}</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        ${group.skills.map(skill => `
+                            <span class="px-2.5 py-1 text-xs font-medium bg-slate-100 text-slate-700 rounded-md border border-slate-200/60">
+                                ${skill}
+                            </span>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render Projects with Search Filtering
+        function renderProjects(filterText = '') {
+            const container = document.getElementById('projects-container');
+            const noProjects = document.getElementById('no-projects');
+            
+            const filtered = projectsData.filter(proj => {
+                const searchKey = filterText.toLowerCase();
+                const matchTitle = proj.title.toLowerCase().includes(searchKey);
+                const matchDesc = proj.description.toLowerCase().includes(searchKey);
+                const matchTags = proj.tags.some(tag => tag.toLowerCase().includes(searchKey));
+                return matchTitle || matchDesc || matchTags;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                noProjects.classList.remove('hidden');
+                return;
+            }
+
+            noProjects.classList.add('hidden');
+            container.innerHTML = filtered.map(proj => `
+                <div class="bg-white rounded-xl border border-slate-200 p-6 flex flex-col justify-between card-shadow">
+                    <div>
+                        <h3 class="font-bold text-navy-900 text-lg tracking-tight mb-2 leading-snug">${proj.title}</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">${proj.description}</p>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            ${proj.tags.map(tag => `
+                                <span class="px-2 py-0.5 text-[11px] font-semibold bg-slate-50 text-slate-600 rounded border border-slate-200">
+                                    ${tag}
+                                </span>
+                            `).join('')}
+                        </div>
+
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-xs font-medium">
+                            <a href="${proj.codeLink}" target="_blank" class="text-slate-600 hover:text-navy-900 inline-flex items-center gap-1 transition-colors">
+                                <i class="fa-brands fa-github text-sm"></i> Source Code
+                            </a>
+                            <a href="${proj.demoLink}" target="_blank" class="text-brand-600 hover:text-brand-700 inline-flex items-center gap-1 font-semibold transition-colors">
+                                Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Search Listener
+        document.getElementById('project-search').addEventListener('input', (e) => {
+            renderProjects(e.target.value);
+        });
+
+        // Initialize Dynamic Metadata
+        function initMetadata() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Auto update status date string
+            const now = new Date();
+            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            document.getElementById('last-updated').textContent = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+        }
+
+        // Initialize App on DOM Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderSkills();
+            renderProjects();
+            initMetadata();
+        });
+    </script>
+</body>
+</html>
